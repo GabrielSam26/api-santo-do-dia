@@ -23,9 +23,10 @@ configuracao_cache = {
     'CACHE_TYPE': 'SimpleCache',  # Para produção: 'redis'
     'CACHE_DEFAULT_TIMEOUT': 86400,
     'CACHE_KEY_PREFIX': 'santos_',
-    'CACHE_REDIS_URL': 'redis://localhost:6379/0',  # Descomentar para Redis
-    'CACHE_OPTIONS': {'compression': True}  # Habilita compressão
+    # Remova ou comente a linha abaixo
+    # 'CACHE_REDIS_URL': 'redis://localhost:6379/0',  # Descomentar para Redis
 }
+
 app.config.from_mapping(configuracao_cache)
 cache = Cache(app)
 
