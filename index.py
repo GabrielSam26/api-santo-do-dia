@@ -237,7 +237,7 @@ atexit.register(lambda: agendador.shutdown())
 
 if __name__ == "__main__":
     try:
-        app.run(debug=True)
+        app.run(debug=True, port=5000)  # Substitua 5000 pela porta desejada
     except (KeyboardInterrupt, SystemExit):
         # Garante que o agendador seja encerrado adequadamente
         agendador.shutdown()
